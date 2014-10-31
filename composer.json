@@ -1,0 +1,27 @@
+{
+    "name": "rheck/datatable-bundle",
+    "description": "Bundle to work with DataTables on Symfony2",
+    "keywords": ["Datatable","Rheck", "RheckDatatable"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ricardo Heck",
+            "email": "rheck@conrad-caine.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": ">=2.0,<2.3-dev",
+        "doctrine/orm": ">=2.2.3,<2.4-dev",
+        "doctrine/doctrine-bundle": "~1.0"
+    },
+    "suggest": {
+        "jms/serializer-bundle": "Advanced JSON encoding capabilities, recommended."
+    },
+    "autoload": {
+        "psr-0": { "Rheck\\DatatableBundle": "" }
+    },
+    "minimum-stability": "dev",
+    "target-dir": "Rheck/DatatableBundle"
+}

@@ -1,0 +1,7 @@
+parameters:
+  rheck.datatable.manager.class: "Rheck\DatatableBundle\Datables\DatatableManager"
+
+services:
+  rheck.datatables:
+    class: "%rheck.datatable.manager.class%"
+    arguments: [ "@doctrine", "@service_container" ]
