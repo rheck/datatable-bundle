@@ -29,7 +29,7 @@ class RheckDatatableExtension extends Extension
             $container->setAlias($this->getAlias() . '.' . $key, $service);
         }
 
-        $container->getDefinition('rheck_datatable')
+        $container->getDefinition('rheck.datatables')
             ->replaceArgument(2, $config['datatable']['use_doctrine_paginator']);
     }
 

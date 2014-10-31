@@ -4,4 +4,4 @@ parameters:
 services:
   rheck.datatables:
     class: "%rheck.datatable.manager.class%"
-    arguments: [ "@doctrine", "@service_container" ]
+    arguments: [ "@doctrine", "@service_container", "" ]
