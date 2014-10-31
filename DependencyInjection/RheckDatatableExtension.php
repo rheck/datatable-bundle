@@ -1,6 +1,6 @@
 <?php
 
-namespace LanKit\DatatablesBundle\DependencyInjection;
+namespace Rheck\DatatableBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class LanKitDatatablesExtension extends Extension
+class RheckDatatableExtension extends Extension
 {
     /**
      * {@inheritDoc}
@@ -22,14 +22,14 @@ class LanKitDatatablesExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
 
         foreach ($config['service'] as $key => $service) {
             $container->setAlias($this->getAlias() . '.' . $key, $service);
         }
 
-        $container->getDefinition('lankit_datatables')
+        $container->getDefinition('rheck_datatable')
             ->replaceArgument(2, $config['datatable']['use_doctrine_paginator']);
     }
 
@@ -38,6 +38,6 @@ class LanKitDatatablesExtension extends Extension
      */
     public function getAlias()
     {
-        return 'lankit_datatables';
+        return 'rheck_datatable';
     }
 }
