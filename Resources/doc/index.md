@@ -57,18 +57,8 @@ lankit_datatables:
 
 Add LanKitDatatablesBundle to your composer.json:
 
-```js
-{
-    "require": {
-        "lankit/datatables-bundle": "*"
-    }
-}
-```
-
-Use composer to download the bundle using the following command:
-
-``` bash
-$ php composer.phar update lankit/datatables-bundle
+```sh
+composer require lankit/datatables-bundle
 ```
 
 ### Step 2: Enable the bundle
