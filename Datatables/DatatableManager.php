@@ -64,7 +64,7 @@ class DatatableManager
             $this->doctrine->getRepository($class),
             $this->doctrine->getManager()->getClassMetadata($class),
             $this->doctrine->getManager(),
-            $this->container->get('rheck.datatables.serializer'),
+            $this->container->get('rheck_datatable.serializer'),
             $serverSideControl
         );
         return $datatable->useDoctrinePaginator($this->useDoctrinePaginator); 
