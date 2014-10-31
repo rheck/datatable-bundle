@@ -1,5 +1,5 @@
 parameters:
-  rheck.datatable.manager.class: "Rheck\DatatableBundle\Datables\DatatableManager"
+  rheck.datatable.manager.class: "Rheck\DatatableBundle\Datatables\DatatableManager"
 
 services:
   rheck.datatables:
